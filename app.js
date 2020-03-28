@@ -15,3 +15,19 @@ data = {
 http.post('https://jsonplaceholder.typicode.com/posts', data)
   .then(data => console.log(data))
   .catch(err => console.log(err));
+
+// Create the data that needs to be put:
+data1 = {
+  name: 'Vaibhav Shrivastav',
+  email: 'vs123@gmail.com'
+}
+
+// PUT data:
+http.put('https://jsonplaceholder.typicode.com/posts/20', data1)
+  .then(data => console.log(data))
+  .catch(err => console.log(err)); // The last nukber in the url specifies the id of that needs to be updated
+
+// DELETE data:
+http.delete('https://jsonplaceholder.typicode.com/posts/20')
+  .then(data => console.log(data))
+  .catch(err => console.log(err));
